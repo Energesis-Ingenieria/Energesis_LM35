@@ -17,6 +17,7 @@
 #include <Arduino.h>
 #include <Energesis_LM35.h>
 
+// for access Energesis namespace
 using namespace Energesis;
 
 //Energesis_LM35 lm35; 

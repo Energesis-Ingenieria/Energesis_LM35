@@ -1,6 +1,7 @@
 # Energesis LM35
 
-![Hex.pm](https://img.shields.io/hexpm/l/plug) [![PlatformIO Registry](https://badges.registry.platformio.org/packages/energesis-ingenieria/library/Energesis_LM35.svg)](https://registry.platformio.org/libraries/energesis-ingenieria/Energesis_LM35) [![GitHub Release](https://img.shields.io/github/release/energesis-ingenieria/Energesis_LM35.svg?style=flat)]() ![GitHub all releases](https://img.shields.io/github/downloads/energesis-ingenieria/Energesis_LM35/total) ![GitHub watchers](https://img.shields.io/github/watchers/Energesis-Ingenieria/Energesis_LM35)
+![Hex.pm](https://img.shields.io/hexpm/l/plug)  [![PlatformIO Registry](https://badges.registry.platformio.org/packages/energesis-ingenieria/library/Energesis%20LM35.svg)](https://registry.platformio.org/libraries/energesis-ingenieria/Energesis%20LM35) [![GitHub Release](https://img.shields.io/github/release/Energesis-Ingenieria/Energesis_LM35.svg?style=flat)]() ![GitHub all releases](https://img.shields.io/github/downloads/Energesis-Ingenieria/Energesis_LM35/total)  ![GitHub watchers](https://img.shields.io/github/watchers/Energesis-Ingenieria/Energesis_LM35) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Energesis-Ingenieria/Energesis_LM35)
+
 
 
 ## About the LM35
@@ -13,9 +14,9 @@ More information can be found in the datasheet: https://www.ti.com/lit/ds/symlin
 
 ## How to use it?
 
- - See example [LM35_basic](examples/LM35_basic/LM35_basic.ino) for regular use of sensor.
+ - See example [LM35 Basic](examples/LM35_basic/LM35_basic.ino) for regular use of sensor.
 
- - See example [LM35_generic](examples/LM35_generic/LM35_generic.ino) for use as Energesis_Sensor instance. This example shows the use of the sensor with a generic interface.
+ - See example [LM35 Generic](examples/LM35_generic/LM35_generic.ino) for use as Energesis_Sensor instance. This example shows the use of the sensor with a generic interface.
 
 ## License
 This project is under Apache 2.0 license. See [LICENSE](LICENSE) for more details.

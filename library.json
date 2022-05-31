@@ -1,8 +1,8 @@
 {
   "name": "Energesis LM35",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": "sensor, LM35, temperature",
-  "description": "Driver for LM35 temperature sensor.",
+  "description": "Driver for LM35 series temperature sensor.",
   "authors":
   [
     {

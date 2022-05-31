@@ -39,9 +39,12 @@ const char *type2unit( sensor_type_t t ){
 void printDetails (sensor_details_t &d){
   Serial.println("---------------------------------");
   Serial.print( "Name: " );
+
+  // print sensor name and type
   Serial.println( String(d.name) + " -> " + type2str(d.type) );
 
   Serial.print( "Serial Number: " );
+  // lm35 no have serial number. Must be zero
   Serial.println( (unsigned long)(d.sensor_id) );
   
   Serial.print( "Max value: " );
@@ -52,6 +55,7 @@ void printDetails (sensor_details_t &d){
   Serial.print( d.min_value);
   Serial.println( type2unit( d.type ) );
 
+  // current consum (see datasheet)
   Serial.print( "Current consum[mA]: " );
   Serial.println( d.power );
 
@@ -60,7 +64,6 @@ void printDetails (sensor_details_t &d){
   Serial.println( type2unit( d.type ) );
 
   Serial.println("-----------------------------------------");
-
 }
 
 void setup() {
@@ -79,6 +82,7 @@ void setup() {
 
   sensor_details_t det;
 
+  // All Energesis_Sensor derived driver have this function
   lm35.getSensorDetails( &det );
 
   printDetails( det );

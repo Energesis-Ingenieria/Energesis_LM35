@@ -65,7 +65,7 @@ class Energesis_LM35: public Energesis_Sensor, public Energesis_AnalogSensor,pub
     /**
      * @brief Inicializa el controlador de LM35.
      * 
-     * @param analog_res resolución del ADC. 
+     * @param analog_res resolución del ADC en bits. 
      * @param v_ref Voltaje de referencia en milivoltios.
      * @param pin Pin del MCU conectado al pin Vout del sensor. Tiene 
      * que ser un pin analógico.
@@ -75,7 +75,6 @@ class Energesis_LM35: public Energesis_Sensor, public Energesis_AnalogSensor,pub
      * @note 
      */
     bool begin(int16_t pin, uint8_t analog_res, float v_ref);
-
 
     /**
      * @brief Especifica el pin del MCU conectado al pin Vout del sensor.
@@ -102,20 +101,30 @@ class Energesis_LM35: public Energesis_Sensor, public Energesis_AnalogSensor,pub
      */
     float getTemperature() override;
 
+    /**
+     * @brief Retorna una instancia de controlador genérico
+     * 
+     * @return Energesis_Sensor* 
+     */
     Energesis_Sensor *getTemperatureSensor(){ return this; }
     
+    /**
+     * @brief Retorna el valor leído por el ADC, en lugar de la temperatura
+     * 
+     * @return uint16_t Valor leído por el ADC. 
+     */
     uint16_t getRaw();
 
+    /** @see Energesis_Sensor::getSample */
     bool getSample( sensor_sample_t *sample );
 
+    /** @see Energesis_Sensor::getSensorDetails */
     void getSensorDetails( sensor_details_t *details );
 
 
   private:
-    int16_t m_pin;
-    lm35_series_t m_serie;
-
-
+    int16_t m_pin;        //!< Pin al que se conecta la salida del sensor
+    lm35_series_t m_serie;//!< Identifica la serie del sensor
 };
 
 
